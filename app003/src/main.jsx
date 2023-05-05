@@ -11,6 +11,7 @@ import { action as destroyAction } from "./routes/destroy";
 import ErrorPage from "./error-page";
 import Index from "./routes/index";
 import "./index.css";
+import { Bears } from "./routes/bears";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,11 @@ const router = createBrowserRouter([
         errorElement: <div>Oops! There was an error.</div>,
       },
     ],
+  },
+  {
+    path: "/bear",
+    element: <Bears />,
+    errorElement: <ErrorPage />,
   },
 ]);
 
